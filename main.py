@@ -11,6 +11,8 @@ app = Sanic('app')
 async def hello_world(req):
     return res.text('Hello world')
 
+
+
 @app.post('api/predict')
 async def predict_click(req):
     values = req.json
