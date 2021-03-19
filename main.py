@@ -11,6 +11,9 @@ app = Sanic('app')
 async def hello_world(req):
     return res.text('Hello world')
 
+@app.post('/echo')
+async def echo(req):
+    return res.json(req.json)
 
 
 @app.post('api/predict')
